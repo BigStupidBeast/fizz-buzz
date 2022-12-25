@@ -9,23 +9,40 @@ always be divisible by 15, print
 'FizzBuzz' in place of the number
 '''
 
+from number_multiple_checker import checking_multiple as divide
 
-def main_function(a: int, b: int, c: int, message1='fizz', message2='buzz'):
+
+def main_function(number_to_check: int, divisor_one: int, divisor_two: int, message1='Fizz', message2='Buzz'):
     """
     main function:
     Printing results of checking.
     Takes
-    :param a: (integer)
+    :param number_to_check: (integer)
     if it multiplies of
-    :param b: (integer)
+    :param divisor_one: (integer)
     then print
     :param message1: (string)
     if it multiplies of
-    :param c: (integer)
+    :param divisor_two: (integer)
     then print
     :param message2: (string)
 
     :return: 1
     """
-    # todo: dictionary of args
-    ...
+
+    if divide(number_to_check, divisor_one) and divide(number_to_check, divisor_two):
+        print(message1+message2)
+    elif divide(number_to_check, divisor_one):
+        print(message1)
+    elif divide(number_to_check, divisor_two):
+        print(message2)
+    else:
+        print(number_to_check)
+
+
+if __name__ == '__main__':
+    Fizz_num = 3
+    Buzz_num = 5
+
+    for i in range(100):
+        main_function(i, Fizz_num, Buzz_num)
