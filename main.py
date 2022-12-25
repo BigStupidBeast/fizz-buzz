@@ -9,40 +9,43 @@ always be divisible by 15, print
 'FizzBuzz' in place of the number
 '''
 
-from number_multiple_checker import checking_multiple as divide
+from number_multiple_checker import checking_multiple as checked
 
 
-def main_function(number_to_check: int, divisor_one: int, divisor_two: int, message1='Fizz', message2='Buzz'):
+def fizz_buzz_returner(number_to_check: int, divisor_one: int, divisor_two: int, message1='Fizz', message2='Buzz'):
     """
-    main function:
-    Printing results of checking.
-    Takes
-    :param number_to_check: (integer)
-    if it multiplies of
+    Return message or number depending on results of the checks.
+    Function takes
+    :param number_to_check: (integer).
+
+    If it multiplies of
     :param divisor_one: (integer)
-    then print
-    :param message1: (string)
-    if it multiplies of
-    :param divisor_two: (integer)
-    then print
-    :param message2: (string)
+    then :return:
+    :param message1: (string).
 
-    :return: 1
+    If it multiplies of
+    :param divisor_two: (integer)
+    then :return:
+    :param message2: (string).
+
+    If it multiplies both, then :return:  concatenation of :param message1 one and :param message2.
+
+
     """
 
-    if divide(number_to_check, divisor_one) and divide(number_to_check, divisor_two):
-        print(message1+message2)
-    elif divide(number_to_check, divisor_one):
-        print(message1)
-    elif divide(number_to_check, divisor_two):
-        print(message2)
+    if checked(number_to_check, divisor_one) and checked(number_to_check, divisor_two):
+        return message1+message2
+    elif checked(number_to_check, divisor_one):
+        return message1
+    elif checked(number_to_check, divisor_two):
+        return message2
     else:
-        print(number_to_check)
+        return number_to_check
 
 
 if __name__ == '__main__':
-    Fizz_num = 3
-    Buzz_num = 5
+    fizz_num = 3
+    buzz_num = 5
 
     for i in range(100):
-        main_function(i, Fizz_num, Buzz_num)
+        print(fizz_buzz_returner(i, fizz_num, buzz_num))
