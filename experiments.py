@@ -1,24 +1,13 @@
-'''
-Write a program that prints the numbers 
-from 1 to 100 
-and for multiples of ‘3’ print “Fizz”
-instead of the number and for the multiples of ‘5’ print “Buzz”.
- 
-number divisible by 3 and 5 will
-always be divisible by 15, print
-'FizzBuzz' in place of the number
-'''
-
-from number_multiple_checker import checking_multiple as checked
+# print(*map(lambda i: 'Fizz'*(not i%3)+'Buzz'*(not i%5) or i, range(1,101)),sep='\n')
 
 
 def perfect_ozz_checker(num_for_check, dividers_array, message_array) -> str:
     """
     Function takes:
     :param num_for_check: expected positive integer
-    :param dividers_array: expected array of integers
-    :param message_array:  expected array of strings whose length is equal to the length
-    of the array of divisors
+    :param dividers_array:
+    :param message_array:
+    excepted that length of arrays is equal
     :return: string
     """
     result_of_checking = ''
