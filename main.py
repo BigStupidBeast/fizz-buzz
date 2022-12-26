@@ -10,7 +10,7 @@ always be divisible by 15, print
 '''
 
 
-def perfect_ozz_checker(num_for_check, dividers_array, message_array=['Fizz', 'Buzz', 'Juzz']) -> str:
+def perfect_oz_checker(num_for_check=60, dividers_array=[2,3,5], message_array=['Fizz', 'Buzz', 'Juzz']) -> str:
     """
     Check the number and if it multiplies one of dividers return message like “Fizz”
 
@@ -42,11 +42,13 @@ def perfect_ozz_checker(num_for_check, dividers_array, message_array=['Fizz', 'B
 
 
 if __name__ == '__main__':
+    print(perfect_oz_checker())
+
 
     dividers = [3, 5, 4]
     result_list = []
     for int_num in range(100):
-        result_list.append(perfect_ozz_checker(int_num, dividers))
+        result_list.append(perfect_oz_checker(int_num, dividers))
     print(result_list)
     print('**********\n')
 
@@ -54,7 +56,7 @@ if __name__ == '__main__':
     messages = ['fizzz', 'buzzz', 'juzzz']
     result_list = []
     for int_num in range(100):
-        result_list.append(perfect_ozz_checker(int_num, dividers))
+        result_list.append(perfect_oz_checker(int_num, dividers))
     print(result_list)
     print('**********\n')
 
@@ -62,7 +64,7 @@ if __name__ == '__main__':
     messages = ['fizzz', 'buzzz', 'juzzz']
     result_list = []
     for int_num in range(100):
-        result_list.append(perfect_ozz_checker(int_num, dividers))
+        result_list.append(perfect_oz_checker(int_num, dividers))
     print(result_list)
 
 '''
