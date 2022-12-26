@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "fizz-buzz"
+version = "0.1.0"
+description = "best fizz-buzz implementation with tests logs and exceptions"
+authors = ["Dmitrii Dobrov <60842990+BigStupidBeast@users.noreply.github.com>"]
+license = "free"
+readme = "README.md"
+packages = [{include = "fizz_buzz"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pytest = "^7.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
