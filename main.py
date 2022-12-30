@@ -24,13 +24,11 @@ def perfect_oz_checker(num_for_check=60, dividers_array=[2,3,5], message_array=[
 
     result_of_checking = ''
 
-    if type(dividers_array) not in [int, list]:
+    if not isinstance(dividers_array, (int, list)):
         raise TypeError('You must use integer or list of integers')
 
     if type(dividers_array) == int:
-        tempo = []
-        tempo.append(dividers_array)
-        dividers_array = tempo
+        dividers_array = [dividers_array]
 
     for i in range(len(dividers_array)):
         result_of_checking += message_array[i] * (not num_for_check % dividers_array[i])
