@@ -7,6 +7,8 @@ instead of the number and for the multiples of ‘5’ print “Buzz”.
 number divisible by 3 and 5 will
 always be divisible by 15, print
 'FizzBuzz' in place of the number
+
+https://en.wikipedia.org/wiki/Fizz_buzz
 '''
 
 
@@ -66,14 +68,6 @@ if __name__ == '__main__':
     print(result_list)
 
 '''
-smoke zero message
-smoke with message
-    main breakable cases
-smoke with tuple of message
-list with one broken part
-message length<dividers len
-dividers like string
-one divider 
 
 refactor to class
 '''

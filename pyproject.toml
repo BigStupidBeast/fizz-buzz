@@ -11,6 +11,9 @@ packages = [{include = "fizz_buzz"}]
 python = "^3.10"
 pytest = "^7.2.0"
 
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-v -l"
 
 [build-system]
 requires = ["poetry-core"]
