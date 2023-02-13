@@ -1,6 +1,6 @@
 # fizz-buzzz
 perfect fizz buzz program   
-let's try to write program as it sould be
+let's write a program such as it should be
 
 
 Write a program that prints the numbers   

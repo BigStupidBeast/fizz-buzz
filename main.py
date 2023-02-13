@@ -1,15 +1,45 @@
 '''
-Write a program that prints the numbers 
-from 1 to 100 
-and for multiples of ‘3’ print “Fizz”
-instead of the number and for the multiples of ‘5’ print “Buzz”.
- 
-number divisible by 3 and 5 will
-always be divisible by 15, print
-'FizzBuzz' in place of the number
-
 https://en.wikipedia.org/wiki/Fizz_buzz
 '''
+
+
+class FizzBuzzCheckCreator1:
+
+    def __init__(self, inp_num_for_check, inp_dividers, inp_message):
+
+        if inp_num_for_check:
+            self.cl_number_for_check = inp_num_for_check
+        else:
+            raise ValueError('You should gib me a number for checking. Integer please')
+
+        if inp_dividers:
+            self.cl_dividers = inp_dividers
+        else:
+            self.cl_dividers = [2, 3, 5]
+
+
+
+        if inp_message:
+            self.cl_message = inp_message
+        else:
+            self.cl_message = ['Fizz', 'Buzz', 'Juzz']
+
+
+class FizzBuzzCheckCreator2:
+
+    def __init__(self, inp_num_for_check, inp_dividers=[2, 3, 5], inp_message=['Fizz', 'Buzz', 'Juzz']):
+
+        if inp_num_for_check:
+            self.cl_number_for_check = inp_num_for_check
+        else:
+            raise ValueError('You should gib me a number for checking. Integer please')
+
+        self.cl_dividers = inp_dividers
+        self.cl_message = inp_message
+
+
+
+
 
 
 def perfect_oz_checker(num_for_check=60, dividers_array=[2,3,5], message_array=['Fizz', 'Buzz', 'Juzz']) -> str:
@@ -42,15 +72,19 @@ def perfect_oz_checker(num_for_check=60, dividers_array=[2,3,5], message_array=[
 
 
 if __name__ == '__main__':
+    '''Examples of main function working.'''
+
     print(perfect_oz_checker())
 
+    print('\n***-*-*-*-*-*-*-*-*-*-*-***\n')
 
     dividers = [3, 5, 4]
     result_list = []
     for int_num in range(100):
         result_list.append(perfect_oz_checker(int_num, dividers))
     print(result_list)
-    print('**********\n')
+
+    print('\n***-*-*-*-*-*-*-*-*-*-*-***\n')
 
     dividers = [3, 5, 4]
     messages = ['fizzz', 'buzzz', 'juzzz']
@@ -58,7 +92,8 @@ if __name__ == '__main__':
     for int_num in range(100):
         result_list.append(perfect_oz_checker(int_num, dividers))
     print(result_list)
-    print('**********\n')
+
+    print('\n***-*-*-*-*-*-*-*-*-*-*-***\n')
 
     dividers = 3
     messages = ['fizzz', 'buzzz', 'juzzz']
@@ -68,6 +103,5 @@ if __name__ == '__main__':
     print(result_list)
 
 '''
-
 refactor to class
 '''
